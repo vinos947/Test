@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POINTS</title>
+    <title>Griglia Interattiva</title>
     <style>
       body {
         font-family: Arial, sans-serif;
         text-align: center;
         padding: 20px;
         margin: 0;
-        background-image: url('https://i.playground.ru/p/tj1-kxfWtLGBFe6XXMNxbA.png');
+        background-image: url("img.png"); /* Percorso relativo dell'immagine */
         background-size: cover; /* Adatta l'immagine alla pagina */
-        background-position: top right; /* Centra l'immagine */
+        background-position: center; /* Centra l'immagine */
         background-attachment: fixed; /* Fissa l'immagine quando scorri */
         display: flex; /* Usa flexbox per centrare il contenuto */
         flex-direction: column;
@@ -25,15 +25,15 @@
         display: grid;
         grid-template-columns: repeat(
           4,
-          60px
+          100px
         ); /* 4 colonne, puoi cambiare questo valore */
         grid-gap: 10px;
         justify-content: center;
       }
 
       .box {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
         border-radius: 10%;
         display: flex;
         justify-content: center;
@@ -52,7 +52,7 @@
       .box.selected {
         background-color: #51778e; /* Oscuramento del riquadro selezionato */
         color: white;
-        
+        transform: scale(1.1);
       }
 
       #total {
@@ -77,231 +77,230 @@
     <h1>ONE HANDED</h1>
     <div class="content">
       <div class="container" data-id="1">
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="1a">1000</div>
+        <div class="box" data-value="2a">1000</div>
+        <div class="box" data-value="3a">1000</div>
+        <div class="box" data-value="4a">1000</div>
+        <div class="box" data-value="5a">1000</div>
+        <div class="box" data-value="6a">1000</div>
+        <div class="box" data-value="7a">2000</div>
+        <div class="box" data-value="8a">2000</div>
+        <div class="box" data-value="9a">2000</div>
+        <div class="box" data-value="10a">2000</div>
+        <div class="box" data-value="11a">2000</div>
+        <div class="box" data-value="12a">2000</div>
+        <div class="box" data-value="13a">5000</div>
+        <div class="box" data-value="14a">5000</div>
+        <div class="box" data-value="15a">5000</div>
+        <div class="box" data-value="16a">5000</div>
       </div>
     </div>
 
     <h1>LONG RANGE</h1>
     <div class="content">
       <div class="container" data-id="2">
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="10000">10000</div>
-        <div class="box" data-value="10000">10000</div>
+        <div class="box" data-value="1b">1000</div>
+        <div class="box" data-value="2b">1000</div>
+        <div class="box" data-value="3b">1000</div>
+        <div class="box" data-value="4b">1000</div>
+        <div class="box" data-value="5b">1000</div>
+        <div class="box" data-value="6b">1000</div>
+        <div class="box" data-value="7b">1000</div>
+        <div class="box" data-value="8b">2000</div>
+        <div class="box" data-value="9b">2000</div>
+        <div class="box" data-value="10b">2000</div>
+        <div class="box" data-value="11b">2000</div>
+        <div class="box" data-value="12b">5000</div>
+        <div class="box" data-value="13b">5000</div>
+        <div class="box" data-value="14b">5000</div>
+        <div class="box" data-value="15b">5000</div>
+        <div class="box" data-value="16b">10000</div>
+        <div class="box" data-value="17b">10000</div>
       </div>
     </div>
 
     <h1>HEAVY</h1>
     <div class="content">
       <div class="container" data-id="3">
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="10000">10000</div>
-        <div class="box" data-value="10000">10000</div>
+        <div class="box" data-value="1c">1000</div>
+        <div class="box" data-value="2c">1000</div>
+        <div class="box" data-value="3c">1000</div>
+        <div class="box" data-value="4c">1000</div>
+        <div class="box" data-value="5c">1000</div>
+        <div class="box" data-value="6c">1000</div>
+        <div class="box" data-value="7c">2000</div>
+        <div class="box" data-value="8c">2000</div>
+        <div class="box" data-value="9c">2000</div>
+        <div class="box" data-value="10c">2000</div>
+        <div class="box" data-value="11c">5000</div>
+        <div class="box" data-value="12c">5000</div>
+        <div class="box" data-value="13c">5000</div>
+        <div class="box" data-value="14c">5000</div>
+        <div class="box" data-value="15c">10000</div>
+        <div class="box" data-value="16c">10000</div>
       </div>
     </div>
 
     <h1>PISTOL</h1>
     <div class="content">
       <div class="container" data-id="4">
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="10000">10000</div>
-        <div class="box" data-value="10000">10000</div>
+        <div class="box" data-value="1d">1000</div>
+        <div class="box" data-value="2d">1000</div>
+        <div class="box" data-value="3d">2000</div>
+        <div class="box" data-value="4d">5000</div>
+        <div class="box" data-value="5d">10000</div>
+        <div class="box" data-value="6d">10000</div>
       </div>
     </div>
 
     <h1>HEAD</h1>
     <div class="content">
       <div class="container" data-id="5">
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="1000">1000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="2000">2000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
-        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="1e">1000</div>
+        <div class="box" data-value="2e">1000</div>
+        <div class="box" data-value="3e">1000</div>
+        <div class="box" data-value="4e">1000</div>
+        <div class="box" data-value="5e">1000</div>
+        <div class="box" data-value="6e">1000</div>
+        <div class="box" data-value="7e">1000</div>
+        <div class="box" data-value="8e">1000</div>
+        <div class="box" data-value="9e">1000</div>
+        <div class="box" data-value="10e">2000</div>
+        <div class="box" data-value="11e">2000</div>
+        <div class="box" data-value="12e">2000</div>
+        <div class="box" data-value="13e">2000</div>
+        <div class="box" data-value="14e">2000</div>
+        <div class="box" data-value="15e">2000</div>
+        <div class="box" data-value="16e">2000</div>
+        <div class="box" data-value="17e">5000</div>
+        <div class="box" data-value="18e">5000</div>
+        <div class="box" data-value="19e">5000</div>
+        <div class="box" data-value="20e">5000</div>
+        <div class="box" data-value="21e">5000</div>
+        <div class="box" data-value="22e">5000</div>
+        <div class="box" data-value="23e">5000</div>
       </div>
     </div>
 
     <h1>CHEST</h1>
 <div class="content">
   <div class="container" data-id="6">
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="1f">1000</div>
+    <div class="box" data-value="2f">1000</div>
+    <div class="box" data-value="3f">1000</div>
+    <div class="box" data-value="4f">1000</div>
+    <div class="box" data-value="5f">1000</div>
+    <div class="box" data-value="6f">1000</div>
+    <div class="box" data-value="7f">1000</div>
+    <div class="box" data-value="8f">1000</div>
+    <div class="box" data-value="9f">1000</div>
+    <div class="box" data-value="10f">2000</div>
+    <div class="box" data-value="11f">2000</div>
+    <div class="box" data-value="12f">2000</div>
+    <div class="box" data-value="13f">2000</div>
+    <div class="box" data-value="14f">2000</div>
+    <div class="box" data-value="15f">2000</div>
+    <div class="box" data-value="16f">2000</div>
+    <div class="box" data-value="17f">2000</div>
+    <div class="box" data-value="18f">5000</div>
+    <div class="box" data-value="19f">5000</div>
+    <div class="box" data-value="20f">5000</div>
+    <div class="box" data-value="21f">5000</div>
+    <div class="box" data-value="22f">5000</div>
+    <div class="box" data-value="23f">5000</div>
+    <div class="box" data-value="24f">5000</div>
   </div>
 </div>
 
 <h1>BRACES</h1>
 <div class="content">
   <div class="container" data-id="7">
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="10000">10000</div>
+    <div class="box" data-value="1g">1000</div>
+    <div class="box" data-value="2g">1000</div>
+    <div class="box" data-value="3g">1000</div>
+    <div class="box" data-value="4g">1000</div>
+    <div class="box" data-value="5g">1000</div>
+    <div class="box" data-value="6g">1000</div>
+    <div class="box" data-value="7g">1000</div>
+    <div class="box" data-value="8g">1000</div>
+    <div class="box" data-value="9g">1000</div>
+    <div class="box" data-value="10g">2000</div>
+    <div class="box" data-value="11g">2000</div>
+    <div class="box" data-value="12g">2000</div>
+    <div class="box" data-value="13g">2000</div>
+    <div class="box" data-value="14g">2000</div>
+    <div class="box" data-value="15g">2000</div>
+    <div class="box" data-value="16g">2000</div>
+    <div class="box" data-value="17g">5000</div>
+    <div class="box" data-value="18g">5000</div>
+    <div class="box" data-value="19g">5000</div>
+    <div class="box" data-value="20g">5000</div>
+    <div class="box" data-value="21g">5000</div>
+    <div class="box" data-value="22g">5000</div>
+    <div class="box" data-value="23g">5000</div>
+    <div class="box" data-value="24g">10000</div>
   </div>
 </div>
 
 <h1>WAIST</h1>
 <div class="content">
   <div class="container" data-id="8">
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="10000">10000</div>
-    <div class="box" data-value="10000">10000</div>
-    <div class="box" data-value="10000">10000</div>
-    <div class="box" data-value="10000">10000</div>
-    <div class="box" data-value="10000">10000</div>
+    <div class="box" data-value="1h">1000</div>
+    <div class="box" data-value="2h">1000</div>
+    <div class="box" data-value="3h">1000</div>
+    <div class="box" data-value="4h">1000</div>
+    <div class="box" data-value="5h">1000</div>
+    <div class="box" data-value="6h">1000</div>
+    <div class="box" data-value="7h">1000</div>
+    <div class="box" data-value="8h">1000</div>
+    <div class="box" data-value="9h">1000</div>
+    <div class="box" data-value="10h">2000</div>
+    <div class="box" data-value="11h">2000</div>
+    <div class="box" data-value="12h">2000</div>
+    <div class="box" data-value="13h">2000</div>
+    <div class="box" data-value="14h">2000</div>
+    <div class="box" data-value="15h">2000</div>
+    <div class="box" data-value="16h">2000</div>
+    <div class="box" data-value="17h">5000</div>
+    <div class="box" data-value="18h">5000</div>
+    <div class="box" data-value="19h">5000</div>
+    <div class="box" data-value="20h">5000</div>
+    <div class="box" data-value="21h">5000</div>
+    <div class="box" data-value="22h">5000</div>
+    <div class="box" data-value="23h">5000</div>
+    <div class="box" data-value="24h">10000</div>
+    <div class="box" data-value="25h">10000</div>
+    <div class="box" data-value="26h">10000</div>
+    <div class="box" data-value="27h">10000</div>
+    <div class="box" data-value="28h">10000</div>
   </div>
 </div>
 
 <h1>LEGS</h1>
 <div class="content">
   <div class="container" data-id="9">
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="1000">1000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="2000">2000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
-    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="1i">1000</div>
+    <div class="box" data-value="2i">1000</div>
+    <div class="box" data-value="3i">1000</div>
+    <div class="box" data-value="4i">1000</div>
+    <div class="box" data-value="5i">1000</div>
+    <div class="box" data-value="6i">1000</div>
+    <div class="box" data-value="7i">1000</div>
+    <div class="box" data-value="8i">1000</div>
+    <div class="box" data-value="9i">2000</div>
+    <div class="box" data-value="10i">2000</div>
+    <div class="box" data-value="11i">2000</div>
+    <div class="box" data-value="12i">2000</div>
+    <div class="box" data-value="13i">2000</div>
+    <div class="box" data-value="14i">5000</div>
+    <div class="box" data-value="15i">5000</div>
+    <div class="box" data-value="16i">5000</div>
+    <div class="box" data-value="17i">5000</div>
+    <div class="box" data-value="18i">5000</div>
+    <div class="box" data-value="19i">5000</div>
+    <div class="box" data-value="20i">5000</div>
   </div>
 </div>
-
 <script>
       // Totale globale
       let total = 523000;
