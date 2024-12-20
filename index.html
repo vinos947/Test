@@ -302,7 +302,7 @@
   </div>
 </div>
 
-    <script>
+<script>
       // Totale globale
       let total = 523000;
       const totalElement = document.getElementById("total");
@@ -315,8 +315,9 @@
           total -= value; // Sottrai il valore
         }
         totalElement.textContent = `${total} Cr Pts`; // Aggiorna il totale visibile
+        localStorage.setItem("total", total); // Salva il totale nel localStorage
       }
-      
+
       // Funzione per salvare lo stato della selezione delle caselle
       function saveSelectionState() {
         const selectedBoxes = document.querySelectorAll(".box.selected");
@@ -357,8 +358,20 @@
               box.classList.add("selected"); // Seleziona il riquadro
               updateGlobalTotal(value, false); // Sottrai il valore dal totale
             }
+
+            saveSelectionState(); // Salva lo stato delle selezioni
           });
         });
+      });
+
+      // Ripristina lo stato delle selezioni e del totale
+      document.addEventListener("DOMContentLoaded", () => {
+        restoreSelectionState();
+        const storedTotal = localStorage.getItem("total");
+        if (storedTotal) {
+          total = parseInt(storedTotal);
+          totalElement.textContent = `${total} Cr Pts`; // Ripristina il totale
+        }
       });
     </script>
   </body>
