@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POINTS</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+        background-image: url('https://i.playground.ru/p/tj1-kxfWtLGBFe6XXMNxbA.png');
+        background-size: cover; /* Adatta l'immagine alla pagina */
+        background-position: top right; /* Centra l'immagine */
+        background-attachment: fixed; /* Fissa l'immagine quando scorri */
+        display: flex; /* Usa flexbox per centrare il contenuto */
+        flex-direction: column;
+        justify-content: center; /* Centra verticalmente */
+        align-items: center; /* Centra orizzontalmente */
+        min-height: 100vh; /* Altezze 100% della viewport per centrare */
+        color: #51778e;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(
+          4,
+          60px
+        ); /* 4 colonne, puoi cambiare questo valore */
+        grid-gap: 10px;
+        justify-content: center;
+      }
+
+      .box {
+        width: 60px;
+        height: 60px;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(
+          240,
+          240,
+          240,
+          0.8
+        ); /* Colore di sfondo semi-trasparente */
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+
+      .box.selected {
+        background-color: #51778e; /* Oscuramento del riquadro selezionato */
+        color: white;
+        
+      }
+
+      #total {
+        font-size: 24px;
+        margin-top: 20px;
+        color: whitesmoke;
+        width: 430px;
+        text-align: center;
+        background-color: #51778e;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra per visibilità */
+        margin-bottom: 40px; /* Distanza dalla griglia */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Totale complessivo -->
+    <div class="total" id="total">523000 Cr Pts</div>
+
+    <!-- Inizio delle 9 griglie -->
+    <h1>ONE HANDED</h1>
+    <div class="content">
+      <div class="container" data-id="1">
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+      </div>
+    </div>
+
+    <h1>LONG RANGE</h1>
+    <div class="content">
+      <div class="container" data-id="2">
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="10000">10000</div>
+        <div class="box" data-value="10000">10000</div>
+      </div>
+    </div>
+
+    <h1>HEAVY</h1>
+    <div class="content">
+      <div class="container" data-id="3">
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="10000">10000</div>
+        <div class="box" data-value="10000">10000</div>
+      </div>
+    </div>
+
+    <h1>PISTOL</h1>
+    <div class="content">
+      <div class="container" data-id="4">
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="10000">10000</div>
+        <div class="box" data-value="10000">10000</div>
+      </div>
+    </div>
+
+    <h1>HEAD</h1>
+    <div class="content">
+      <div class="container" data-id="5">
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="1000">1000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="2000">2000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+        <div class="box" data-value="5000">5000</div>
+      </div>
+    </div>
+
+    <h1>CHEST</h1>
+<div class="content">
+  <div class="container" data-id="6">
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+  </div>
+</div>
+
+<h1>BRACES</h1>
+<div class="content">
+  <div class="container" data-id="7">
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="10000">10000</div>
+  </div>
+</div>
+
+<h1>WAIST</h1>
+<div class="content">
+  <div class="container" data-id="8">
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="10000">10000</div>
+    <div class="box" data-value="10000">10000</div>
+    <div class="box" data-value="10000">10000</div>
+    <div class="box" data-value="10000">10000</div>
+    <div class="box" data-value="10000">10000</div>
+  </div>
+</div>
+
+<h1>LEGS</h1>
+<div class="content">
+  <div class="container" data-id="9">
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="1000">1000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="2000">2000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+    <div class="box" data-value="5000">5000</div>
+  </div>
+</div>
+
+    <script>
+      // Totale globale
+      let total = 523000;
+      const totalElement = document.getElementById("total");
+
+      // Funzione per aggiornare il totale globale
+      function updateGlobalTotal(value, isAdding) {
+        if (isAdding) {
+          total += value; // Aggiungi il valore
+        } else {
+          total -= value; // Sottrai il valore
+        }
+        totalElement.textContent = `${total} Cr Pts`; // Aggiorna il totale visibile
+      }
+      
+      // Funzione per salvare lo stato della selezione delle caselle
+      function saveSelectionState() {
+        const selectedBoxes = document.querySelectorAll(".box.selected");
+        const selectedValues = [];
+        selectedBoxes.forEach((box) => {
+          selectedValues.push(box.getAttribute("data-value"));
+        });
+        localStorage.setItem("selectedBoxes", JSON.stringify(selectedValues)); // Salva in localStorage
+      }
+
+      // Funzione per ripristinare lo stato delle caselle selezionate
+      function restoreSelectionState() {
+        const selectedValues = JSON.parse(localStorage.getItem("selectedBoxes") || "[]");
+        const boxes = document.querySelectorAll(".box");
+        boxes.forEach((box) => {
+          const value = box.getAttribute("data-value");
+          if (selectedValues.includes(value)) {
+            box.classList.add("selected");
+            updateGlobalTotal(parseInt(value), false); // Aggiungi al totale
+          }
+        });
+      }
+
+      // Seleziona tutte le griglie
+      const containers = document.querySelectorAll(".container");
+      containers.forEach((container) => {
+        const boxes = container.querySelectorAll(".box");
+
+        boxes.forEach((box) => {
+          box.addEventListener("click", () => {
+            const value = parseInt(box.getAttribute("data-value")); // Ottieni il valore del box
+
+            // Controlla se il riquadro è già selezionato
+            if (box.classList.contains("selected")) {
+              box.classList.remove("selected"); // Deseleziona il riquadro
+              updateGlobalTotal(value, true); // Aggiungi il valore al totale
+            } else {
+              box.classList.add("selected"); // Seleziona il riquadro
+              updateGlobalTotal(value, false); // Sottrai il valore dal totale
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
