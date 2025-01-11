@@ -1,305 +1,81 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ac Unity Points</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottone con Countdown</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 20px;
-        margin: 0;
-        background-image: url("https://i.playground.ru/p/tj1-kxfWtLGBFe6XXMNxbA.png"); /* Percorso relativo dell'immagine */
-        background-size: cover; /* Adatta l'immagine alla pagina */
-        background-position: top right; /* Centra l'immagine */
-        background-attachment: fixed; /* Fissa l'immagine quando scorri */
-        display: flex; /* Usa flexbox per centrare il contenuto */
-        flex-direction: column;
-        justify-content: center; /* Centra verticalmente */
-        align-items: center; /* Centra orizzontalmente */
-        min-height: 100vh; /* Altezze 100% della viewport per centrare */
-        color: #51778e;
-      }
-      .container {
-        display: grid;
-        grid-template-columns: repeat(
-          4,
-          100px
-        ); /* 4 colonne, puoi cambiare questo valore */
-        grid-gap: 10px;
-        justify-content: center;
-      }
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Imposta la disposizione verticale */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-      .box {
-        width: 100px;
-        height: 100px;
-        border-radius: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(
-          240,
-          240,
-          240,
-          0.8
-        ); /* Colore di sfondo semi-trasparente */
-        font-size: 20px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
-      }
+        #start-button {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            width: 100px;
+            height: 100px;
+            border: none;
+            border-radius: 50%; /* Rende il bottone rotondo */
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      .box.selected {
-        background-color: #51778e; /* Oscuramento del riquadro selezionato */
-        color: white;
-      }
+        #letter {
+            margin-top: 20px;
+            font-size: 30px;
+        }
 
-      #total {
-        font-size: 24px;
-        margin-top: 20px;
-        color: whitesmoke;
-        width: 430px;
-        text-align: center;
-        background-color: #51778e;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra per visibilità */
-        margin-bottom: 40px; /* Distanza dalla griglia */
-        position: fixed; /* Fissa il blocco durante lo scroll */
-        top: 40px; /* Distanza dal top della pagina */
-        left: 50%; /* Centra il blocco orizzontalmente */
-        transform: translateX(-50%); /* Centra esattamente rispetto alla larghezza del blocco */
-        z-index: 1000; /* Assicura che il blocco sia sopra altri contenuti */
-      }
+        #countdown {
+            margin-top: 20px;
+            font-size: 25px;
+        }
     </style>
-  </head>
-  <body>
-    <!-- Totale complessivo -->
-    <div class="total" id="total">281000 Cr Pts</div>
+</head>
+<body>
 
-    <!-- Inizio delle 9 griglie -->
-
-    <h1>LONG RANGE</h1>
-    <div class="content">
-      <div class="container" data-id="2">
-        <div class="box" data-value="1000a">1000</div>
-        <div class="box" data-value="1000b">1000</div>
-        <div class="box" data-value="1000c">1000</div>
-        <div class="box" data-value="1000d">1000</div>
-        <div class="box" data-value="1000e">1000</div>
-        <div class="box" data-value="1000g">1000</div>
-        <div class="box" data-value="2000a">2000</div>
-        <div class="box" data-value="2000b">2000</div>
-        <div class="box" data-value="2000c">2000</div>
-        <div class="box" data-value="2000d">2000</div>
-        <div class="box" data-value="5000a">5000</div>
-        <div class="box" data-value="5000b">5000</div>
-        <div class="box" data-value="5000c">5000</div>
-        <div class="box" data-value="5000d">5000</div>
-      </div>
-    </div>
-
-    <h1>HEAVY</h1>
-    <div class="content">
-      <div class="container" data-id="3">
-        <div class="box" data-value="2000aa">2000</div>
-        <div class="box" data-value="2000bb">2000</div>
-        <div class="box" data-value="2000cc">2000</div>
-        <div class="box" data-value="2000dd">2000</div>
-        <div class="box" data-value="5000bb">5000</div>
-        <div class="box" data-value="5000cc">5000</div>
-        <div class="box" data-value="5000dd">5000</div>
-      </div>
-    </div>
-
-    <h1>HEAD</h1>
-    <div class="content">
-      <div class="container" data-id="5">
-        <div class="box" data-value="1000aaa">1000</div>
-        <div class="box" data-value="1000bbb">1000</div>
-        <div class="box" data-value="1000ccc">1000</div>
-        <div class="box" data-value="1000ddd">1000</div>
-        <div class="box" data-value="1000eee">1000</div>
-        <div class="box" data-value="1000fff">1000</div>
-        <div class="box" data-value="1000ggg">1000</div>
-        <div class="box" data-value="1000hhh">1000</div>
-        <div class="box" data-value="1000iii">1000</div>
-        <div class="box" data-value="2000aaa">2000</div>
-        <div class="box" data-value="2000bbb">2000</div>
-        <div class="box" data-value="2000ccc">2000</div>
-        <div class="box" data-value="2000ddd">2000</div>
-        <div class="box" data-value="2000eee">2000</div>
-        <div class="box" data-value="2000fff">2000</div>
-        <div class="box" data-value="2000ggg">2000</div>
-        <div class="box" data-value="5000aaa">5000</div>
-        <div class="box" data-value="5000bbb">5000</div>
-        <div class="box" data-value="5000ccc">5000</div>
-        <div class="box" data-value="5000ddd">5000</div>
-        <div class="box" data-value="5000eee">5000</div>
-        <div class="box" data-value="5000fff">5000</div>
-        <div class="box" data-value="5000ggg">5000</div>
-      </div>
-    </div>
-
-    <h1>CHEST</h1>
-    <div class="content">
-      <div class="container" data-id="6">
-        <div class="box" data-value="1000aaaa">1000</div>
-        <div class="box" data-value="1000bbbb">1000</div>
-        <div class="box" data-value="1000cccc">1000</div>
-        <div class="box" data-value="1000dddd">1000</div>
-        <div class="box" data-value="1000eeee">1000</div>
-        <div class="box" data-value="1000ffff">1000</div>
-        <div class="box" data-value="1000gggg">1000</div>
-        <div class="box" data-value="1000hhhh">1000</div>
-        <div class="box" data-value="1000iiii">1000</div>
-        <div class="box" data-value="2000aaaa">2000</div>
-        <div class="box" data-value="2000bbbb">2000</div>
-        <div class="box" data-value="2000cccc">2000</div>
-        <div class="box" data-value="2000dddd">2000</div>
-        <div class="box" data-value="2000eeee">2000</div>
-        <div class="box" data-value="2000ffff">2000</div>
-        <div class="box" data-value="2000gggg">2000</div>
-        <div class="box" data-value="2000hhhh">2000</div>
-        <div class="box" data-value="5000aaaa">5000</div>
-        <div class="box" data-value="5000bbbb">5000</div>
-        <div class="box" data-value="5000cccc">5000</div>
-        <div class="box" data-value="5000dddd">5000</div>
-        <div class="box" data-value="5000eeee">5000</div>
-        <div class="box" data-value="5000ffff">5000</div>
-        <div class="box" data-value="5000gggg">5000</div>
-      </div>
-    </div>
-
-    <h1>BRACES</h1>
-    <div class="content">
-      <div class="container" data-id="7">
-        <div class="box" data-value="1000aaaaa">1000</div>
-        <div class="box" data-value="1000bbbbb">1000</div>
-        <div class="box" data-value="1000ccccc">1000</div>
-        <div class="box" data-value="1000ddddd">1000</div>
-        <div class="box" data-value="1000eeeee">1000</div>
-        <div class="box" data-value="1000fffff">1000</div>
-        <div class="box" data-value="1000ggggg">1000</div>
-        <div class="box" data-value="1000hhhhh">1000</div>
-        <div class="box" data-value="1000iiiii">1000</div>
-        <div class="box" data-value="2000aaaaa">2000</div>
-        <div class="box" data-value="2000bbbbb">2000</div>
-        <div class="box" data-value="2000ccccc">2000</div>
-        <div class="box" data-value="2000ddddd">2000</div>
-        <div class="box" data-value="2000eeeee">2000</div>
-        <div class="box" data-value="2000fffff">2000</div>
-        <div class="box" data-value="2000ggggg">2000</div>
-        <div class="box" data-value="5000aaaaa">5000</div>
-        <div class="box" data-value="5000bbbbb">5000</div>
-        <div class="box" data-value="5000ccccc">5000</div>
-        <div class="box" data-value="5000ddddd">5000</div>
-        <div class="box" data-value="5000eeeee">5000</div>
-        <div class="box" data-value="5000fffff">5000</div>
-        <div class="box" data-value="5000ggggg">5000</div>
-      </div>
-    </div>
-
-    <h1>WAIST</h1>
-    <div class="content">
-      <div class="container" data-id="8">
-        <div class="box" data-value="1000aaaaaa">1000</div>
-        <div class="box" data-value="1000bbbbbb">1000</div>
-        <div class="box" data-value="1000cccccc">1000</div>
-        <div class="box" data-value="1000dddddd">1000</div>
-        <div class="box" data-value="1000eeeeee">1000</div>
-        <div class="box" data-value="1000ffffff">1000</div>
-        <div class="box" data-value="1000gggggg">1000</div>
-        <div class="box" data-value="1000hhhhhh">1000</div>
-        <div class="box" data-value="1000iiiiii">1000</div>
-        <div class="box" data-value="2000aaaaaa">2000</div>
-        <div class="box" data-value="2000bbbbbb">2000</div>
-        <div class="box" data-value="2000cccccc">2000</div>
-        <div class="box" data-value="2000dddddd">2000</div>
-        <div class="box" data-value="2000eeeeee">2000</div>
-        <div class="box" data-value="2000ffffff">2000</div>
-        <div class="box" data-value="2000gggggg">2000</div>
-        <div class="box" data-value="5000aaaaaa">5000</div>
-        <div class="box" data-value="5000bbbbbb">5000</div>
-        <div class="box" data-value="5000cccccc">5000</div>
-        <div class="box" data-value="5000dddddd">5000</div>
-        <div class="box" data-value="5000eeeeee">5000</div>
-      </div>
-    </div>
+    <button id="start-button">START</button>
+    <div id="letter"></div>
+    <div id="countdown"></div>
 
     <script>
-      // Totale globale
-      let total = 281000;
-      const totalElement = document.getElementById("total");
+        document.getElementById('start-button').addEventListener('click', function() {
+            // Seleziona una lettera casuale tra A e Z
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const randomLetter = letters.charAt(Math.floor(Math.random() * letters.length));
 
-      // Funzione per aggiornare il totale globale
-      function updateGlobalTotal(value, isAdding) {
-        if (isAdding) {
-          total += value; // Aggiungi il valore
-        } else {
-          total -= value; // Sottrai il valore
-        }
-        totalElement.textContent = `${total} Cr Pts`; // Aggiorna il totale visibile
-        localStorage.setItem("total", total); // Salva il totale nel localStorage
-      }
+            // Mostra la lettera sotto al bottone
+            const letterElement = document.getElementById('letter');
+            letterElement.textContent = randomLetter;
 
-      // Funzione per salvare lo stato della selezione delle caselle
-      function saveSelectionState() {
-        const selectedBoxes = document.querySelectorAll(".box.selected");
-        const selectedValues = [];
-        selectedBoxes.forEach((box) => {
-          selectedValues.push(box.getAttribute("data-value"));
+            // Dopo 3 secondi, parte il countdown
+            setTimeout(function() {
+                let countdownTime = 30;
+                const countdownElement = document.getElementById('countdown');
+                
+                // Funzione per aggiornare il countdown
+                const countdownInterval = setInterval(function() {
+                    countdownElement.textContent = `Countdown: ${countdownTime} secondi`;
+                    countdownTime--;
+
+                    if (countdownTime < 0) {
+                        clearInterval(countdownInterval);
+                        countdownElement.textContent = 'Tempo scaduto!';
+                    }
+                }, 1000);
+            }, 2000); // 3 secondi di attesa
         });
-        localStorage.setItem("selectedBoxes", JSON.stringify(selectedValues)); // Salva in localStorage
-      }
-
-      // Funzione per ripristinare lo stato delle caselle selezionate
-      function restoreSelectionState() {
-        const selectedValues = JSON.parse(
-          localStorage.getItem("selectedBoxes") || "[]"
-        );
-        const boxes = document.querySelectorAll(".box");
-        boxes.forEach((box) => {
-          const value = box.getAttribute("data-value");
-          if (selectedValues.includes(value)) {
-            box.classList.add("selected");
-            updateGlobalTotal(parseInt(value), false); // Aggiungi al totale
-          }
-        });
-      }
-
-      // Seleziona tutte le griglie
-      const containers = document.querySelectorAll(".container");
-      containers.forEach((container) => {
-        const boxes = container.querySelectorAll(".box");
-
-        boxes.forEach((box) => {
-          box.addEventListener("click", () => {
-            const value = parseInt(box.getAttribute("data-value")); // Ottieni il valore del box
-
-            // Controlla se il riquadro è già selezionato
-            if (box.classList.contains("selected")) {
-              box.classList.remove("selected"); // Deseleziona il riquadro
-              updateGlobalTotal(value, true); // Aggiungi il valore al totale
-            } else {
-              box.classList.add("selected"); // Seleziona il riquadro
-              updateGlobalTotal(value, false); // Sottrai il valore dal totale
-            }
-
-            saveSelectionState(); // Salva lo stato delle selezioni
-          });
-        });
-      });
-
-      // Ripristina lo stato delle selezioni e del totale
-      document.addEventListener("DOMContentLoaded", () => {
-        restoreSelectionState();
-        const storedTotal = localStorage.getItem("total");
-        if (storedTotal) {
-          total = parseInt(storedTotal);
-          totalElement.textContent = `${total} Cr Pts`; // Ripristina il totale
-        }
-      });
     </script>
-  </body>
+
+</body>
 </html>
